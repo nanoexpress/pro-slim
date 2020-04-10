@@ -40,7 +40,7 @@
     "uWebSockets.js": "github:uNetworking/uWebSockets.js#v17.3.0"
   },
   "devDependencies": {
-    "baretest": "^1.0.0",
+    "baretest": "^2.0.0",
     "eslint": "^6.8.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.1.2",
