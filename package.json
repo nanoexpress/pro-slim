@@ -55,7 +55,7 @@
   "devDependencies": {
     "baretest": "^2.x",
     "eslint": "^7.12.1",
-    "husky": "^4.3.0",
+    "husky": "^4.3.5",
     "lint-staged": "^10.5.1",
     "prettier": "^2.1.2",
     "rollup": "^2.33.1"
