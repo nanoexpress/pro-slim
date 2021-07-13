@@ -11,5 +11,6 @@ coverage
 tests/coverage
 
 cjs/
+typings/
 
 CODE_OF_CONDUCT.md
