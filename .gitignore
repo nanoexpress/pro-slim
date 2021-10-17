@@ -7,6 +7,7 @@
 .DS_Store
 artifacts
 .ansible
+.history
 
 **/artifacts
 **/.ansible
@@ -18,7 +19,6 @@ artifacts
 
 # nano
 .nano/search_history
-
 
 #################
 #####  Logs #####
@@ -149,6 +149,8 @@ functions-build
 ## Bundle files
 ## Build files for
 ## Gatsby, CRA, etc
+esm/*
+!esm/package.json
 cjs/*
 !cjs/package.json
 public/bundle*
