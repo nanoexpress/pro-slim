@@ -4,7 +4,9 @@ import nanoexpress from '../src/nanoexpress.js';
 const app = nanoexpress();
 
 app.get('/video.mp4', (req, res) => {
-  res.onAborted(() => {});
+  res.onAborted(() => {
+    // empty handler
+  });
   req.headers = {};
   req.forEach((key, value) => {
     req.headers[key] = value;
