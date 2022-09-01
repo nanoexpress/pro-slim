@@ -72,7 +72,7 @@ export default exposeApp(
       return this;
     }
 
-    listenSocket(port, host = 'localhost', is_ssl) {
+    listenSocket(port, host = 'localhost', is_ssl = false) {
       const { _config: config } = this;
 
       if (this.https && config.https.separateServer && !this._separateServed) {
@@ -92,7 +92,7 @@ export default exposeApp(
       return this._applyListen(host, port, is_ssl);
     }
 
-    listen(port, host = 'localhost', is_ssl) {
+    listen(port, host = 'localhost', is_ssl = false) {
       if (typeof port === 'string') {
         if (port.indexOf('.') !== -1) {
           const _host = host;
