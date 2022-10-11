@@ -13,15 +13,19 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nanoexpress/pro-slim/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nanoexpress/pro-slim/?branch=master)
 [![GitHub issues](https://img.shields.io/github/issues/nanoexpress/pro-slim.svg)](http://github.com/nanoexpress/pro-slim/issues)
 
-## Special thanks as company sponsoring open-source
+## Special thanks / Sponsors
 
-- JetBrains (from 2019)
-- MacStadium (from 2020)
-- Paw (from 2020)
-- BrowserStack (always from 2016)
+| Sponsor                                       | Since |
+| --------------------------------------------- | ----- |
+| [BrowserStack](https://www.browserstack.com/) | 2016  |
+| [JetBrains](https://www.jetbrains.com/)       | 2019  |
+| [Paw](https://paw.cloud/)                     | 2020  |
+| [MacStadium](https://www.macstadium.com/)     | 2020  |
+| [GitPod](https://www.gitpod.io/)              | 2022  |
 
 as well as [Sergey NN](https://github.com/mrauhu) and
-[Yaroslav Dobzhanskij](https://github.com/yarsky-tgz) as a Gold+ sponsors
+[Yaroslav Dobzhanskij](https://github.com/yarsky-tgz) for
+being Gold+ sponsors for short period of time
 
 ## TO-DO / Roadmap
 
