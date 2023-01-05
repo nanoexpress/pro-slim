@@ -47,7 +47,7 @@
     "eslint-config-airlight-node": "^3.0.5",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
-    "lint-staged-config-airlight": "^3.0.4",
+    "lint-staged-config-airlight": "^3.0.5",
     "prettier": "^2.8.1",
     "prettier-config-airlight": "^1.0.5",
     "rollup": "^3.9.1",
