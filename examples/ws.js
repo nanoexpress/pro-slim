@@ -1,4 +1,4 @@
-/* eslint-disable no-console, security-node/detect-crlf */
+/* eslint-disable no-console */
 import nanoexpress from '../src/nanoexpress.js';
 
 const app = nanoexpress();
