@@ -28,13 +28,13 @@ jobs:
         uses: actions/cache@v3
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install
-        run: yarn --frozen-lockfile
+        run: npm ci
 
       - name: Lint code
-        run: yarn lint
+        run: npm run lint
   test:
     needs: lint
     runs-on: ${{ matrix.os }}
@@ -56,13 +56,13 @@ jobs:
         uses: actions/cache@v3
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install
-        run: yarn --frozen-lockfile
+        run: npm ci
 
       - name: Test code
-        run: yarn test
+        run: npm run test
   release:
     needs: test
     runs-on: ubuntu-22.04
@@ -79,17 +79,15 @@ jobs:
         uses: actions/cache@v3
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install
-        run: yarn --frozen-lockfile
-      - name: semantic-release Prepare
-        run: yarn add semantic-release -W
+        run: npm ci
 
       - name: Build
-        run: yarn build
+        run: npm run build
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: yarn semantic-release
+        run: npx semantic-release
