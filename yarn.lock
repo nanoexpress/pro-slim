@@ -1932,10 +1932,10 @@ linkify-it@^4.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-lint-staged-config-airlight@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/lint-staged-config-airlight/-/lint-staged-config-airlight-4.0.1.tgz#cfb6ce6859bc43790a4f622ba22e109bedc8b3fb"
-  integrity sha512-sw2/4dsY/zD6XYf0awtGYPfcuXlvLiZdb1TorAUw1lHt9HcZHcOGcsP1RNpM+cigHXufa7BFjTBnmCpXG34erw==
+lint-staged-config-airlight@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/lint-staged-config-airlight/-/lint-staged-config-airlight-4.0.2.tgz#3bb7e32983c3170fff34a5385648d43bf7dda982"
+  integrity sha512-FPQBo0RqICoWekIZqExi4BaDyMF81hD3KYgvFBGdbW0dAAzJyyplyd9o/p+xhY8QSV4ksbOzgB13YP2IzrntSw==
 
 lint-staged@^13.2.2:
   version "13.2.2"
