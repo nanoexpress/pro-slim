@@ -22,17 +22,17 @@ describe('HttpResponse.redirect', () => {
       { key: 'Location', value: '/path' }
     ]);
   });
-  it('should return correct path with host', () => {
+  it('should ignore the request Host header (untrusted)', () => {
     const res = new HttpResponse();
     res[__request].headers = {
-      host: 'localhost:3333'
+      host: 'evil.example:3333'
     };
 
     redirect.call(res, '/path');
 
     assert.equal(res.___code, '301 Moved Permanently');
     assert.deepStrictEqual(res.___headers, [
-      { key: 'Location', value: 'https://localhost:3333/path' }
+      { key: 'Location', value: '/path' }
     ]);
   });
 });
