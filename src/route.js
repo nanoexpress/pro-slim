@@ -1,5 +1,5 @@
 /* eslint-disable filename-rules/match, max-lines */
-import { resConfig, __request, __response } from './constants.js';
+import { __request, __response, resConfig } from './constants.js';
 import exposeRoute from './expose/route.js';
 import _gc from './helpers/gc.js';
 import { HttpResponse, HttpResponseKeys } from './polyfills/index.js';

@@ -1,5 +1,5 @@
-import { createBrotliCompress, createDeflate, createGzip } from 'zlib';
-import { reqHeaderResponse, __request } from '../../../constants.js';
+import { createBrotliCompress, createDeflate, createGzip } from 'node:zlib';
+import { __request, reqHeaderResponse } from '../../../constants.js';
 
 const priority = ['gzip', 'br', 'deflate'];
 

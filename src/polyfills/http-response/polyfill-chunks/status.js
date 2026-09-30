@@ -1,4 +1,4 @@
-import http from 'http';
+import http from 'node:http';
 
 export default function status(code) {
   if (typeof code === 'string') {

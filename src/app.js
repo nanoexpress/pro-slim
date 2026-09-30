@@ -39,8 +39,6 @@ export default exposeApp(
           code: err.code
         });
       }
-
-      return this;
     }
 
     setErrorHandler(fn) {
@@ -109,8 +107,8 @@ export default exposeApp(
               typeof currPort === 'object'
                 ? currPort.host
                 : Array.isArray(host)
-                ? host[index]
-                : host;
+                  ? host[index]
+                  : host;
 
             return this.listen(
               typeof currPort === 'object' ? currPort.port : currPort,
