@@ -76,7 +76,7 @@ class HeaderSupportedRoute extends Route {
   }
 }
 
-app.wraps(null, (_method, [url], self) => {
+app.wraps(null, (method, [url], self) => {
   if (url.indexOf(':') !== -1) {
     const matches = url.match(/:(.*)/g);
 

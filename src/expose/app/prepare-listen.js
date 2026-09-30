@@ -4,13 +4,13 @@ export default (App) => {
 
     // Polyfill for plugins like CORS
     if (_routeCalled && !_optionsCalled) {
-      this.options('/*', async (_req, res) => res.end(''));
+      this.options('/*', async (req, res) => res.end(''));
     }
 
     if (!this._anyRouteCalled) {
       const notFoundHandler =
         config._notFoundHandler ||
-        (async (_req, res) => {
+        (async (req, res) => {
           res.writeStatus('404 Not Found');
           res.end(
             JSON.stringify({ code: 404, message: 'The route does not exist' })
