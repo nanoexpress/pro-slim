@@ -4,6 +4,9 @@ import exposeRoute from './expose/route.js';
 import _gc from './helpers/gc.js';
 import { HttpResponse, HttpResponseKeys } from './polyfills/index.js';
 
+// The response prototype is shared by all uWS responses
+let __httpResponseProtoPatched = false;
+
 export default exposeRoute(
   class Route {
     constructor() {
@@ -136,16 +139,24 @@ export default exposeRoute(
         res[__request] = req;
         res[resConfig] = _config;
 
-        // Extending HttpResponse
-        for (let i = 0, len = HttpResponseKeys.length; i < len; i += 1) {
-          newMethod = HttpResponseKeys[i];
+        // Extending HttpResponse (once, see __httpResponseProtoPatched)
+        if (!__httpResponseProtoPatched) {
+          for (let i = 0, len = HttpResponseKeys.length; i < len; i += 1) {
+            newMethod = HttpResponseKeys[i];
 
-          // eslint-disable-next-line no-proto
-          res.__proto__[newMethod] = HttpResponse[newMethod];
+            // eslint-disable-next-line no-proto
+            res.__proto__[newMethod] = HttpResponse[newMethod];
+          }
+          __httpResponseProtoPatched = true;
         }
 
         if (middlewares && middlewares.length > 0) {
-          for await (const middleware of middlewares) {
+          for (
+            let middlewareIndex = 0;
+            middlewareIndex < middlewares.length;
+            middlewareIndex += 1
+          ) {
+            const middleware = middlewares[middlewareIndex];
             if (res.aborted || stopNext || skipCheck) {
               break;
             }
