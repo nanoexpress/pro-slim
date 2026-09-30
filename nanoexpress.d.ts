@@ -1,18 +1,18 @@
-import { Readable } from 'stream';
 import {
   AppOptions as AppOptionsBasic,
+  TemplatedApp as AppTemplatedApp,
   HttpRequest as HttpRequestBasic,
   HttpResponse as HttpResponseBasic,
-  TemplatedApp as AppTemplatedApp,
   WebSocket as WebSocketBasic
 } from 'uWebSockets.js';
+import { Readable } from 'node:stream';
 import {
   BrotliCompress,
   BrotliOptions,
   Deflate,
   Gzip,
   ZlibOptions
-} from 'zlib';
+} from 'node:zlib';
 
 declare namespace nanoexpress {
   export interface AppOptions extends AppOptionsBasic {
@@ -28,8 +28,8 @@ declare namespace nanoexpress {
     json_spaces?: number;
   }
   export type HttpRequestHeaders = Record<string, string | number>;
-  export interface WebSocket extends WebSocketBasic {
-    emit(name: string, ...args: string[] | number[] | void[]): void;
+  export interface WebSocket extends WebSocketBasic<any> {
+    emit(name: string, ...args: string[] | number[] | undefined[]): void;
 
     on(
       event: 'message',
@@ -40,15 +40,15 @@ declare namespace nanoexpress {
 
     on(
       event: string,
-      listener: (...args: string[] | number[] | void[]) => void
+      listener: (...args: string[] | number[] | undefined[]) => void
     ): void;
     once(
       event: string,
-      listener: (...args: string[] | number[] | void[]) => void
+      listener: (...args: string[] | number[] | undefined[]) => void
     ): void;
     off(
       event: string,
-      listener?: (...args: string[] | number[] | void[]) => void
+      listener?: (...args: string[] | number[] | undefined[]) => void
     ): void;
   }
   export interface HttpResponse extends HttpResponseBasic {

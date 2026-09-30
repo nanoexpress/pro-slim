@@ -10,13 +10,13 @@ import writeHeaderValues from './write-header-values.js';
 import writeHeaders from './write-headers.js';
 
 export {
-  setHeader as header,
-  setHeader,
+  applyHeaders,
   getHeader,
   hasHeader,
   removeHeader,
+  setHeader as header,
+  setHeader,
   setHeaders,
-  writeHeaderValues,
   writeHeaders,
-  applyHeaders
+  writeHeaderValues
 };

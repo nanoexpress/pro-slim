@@ -1,8 +1,8 @@
-import { createReadStream, statSync } from 'fs';
+import { createReadStream, statSync } from 'node:fs';
 import {
+  __request,
   reqHeaderResponse,
-  resHeaders,
-  __request
+  resHeaders
 } from '../../../constants.js';
 import { getMime } from '../../../helpers/mime.js';
 
@@ -27,7 +27,7 @@ export default function sendFile(
     const mtimeutc = mtime.toUTCString();
 
     // Return 304 if last-modified
-    if (headers && headers['if-modified-since']) {
+    if (headers?.['if-modified-since']) {
       if (new Date(headers['if-modified-since']) >= mtime) {
         this.writeStatus('304 Not Modified');
         return this.end();
@@ -41,7 +41,7 @@ export default function sendFile(
   let start = 0;
   let end = 0;
 
-  if (headers && headers.range) {
+  if (headers?.range) {
     [start, end] = headers.range
       .substr(6)
       .split('-')
