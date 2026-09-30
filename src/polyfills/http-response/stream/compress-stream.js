@@ -25,7 +25,7 @@ export default function compressStream(stream, options) {
     compression = createBrotliCompress(options);
   } else if (encoding === 'gzip') {
     compression = createGzip(options);
-  } else if (encoding === 'deflare') {
+  } else if (encoding === 'deflate') {
     compression = createDeflate(options);
   }
 
