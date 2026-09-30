@@ -27,8 +27,7 @@ export default (App) => {
           this._instance[id] = token;
           _debugContext.debug(
             `[${sslString}Server]: started successfully at [${id}] in [${(
-              (Number(end[0]) * 1000 + Number(end[1])) /
-              1000000
+              (Number(end[0]) * 1000 + Number(end[1])) / 1000000
             ).toFixed(2)}ms]`
           );
           _gc();
@@ -38,7 +37,7 @@ export default (App) => {
 
           const err = new Error(
             this.https &&
-            (!config.https.cert_file_name || !config.https.key_file_name)
+              (!config.https.cert_file_name || !config.https.key_file_name)
               ? `[${sslString}Server]: SSL certificate was not defined or loaded`
               : `[${sslString}Server]: failed to host at [${id}]`
           );

@@ -1,4 +1,4 @@
-import qs from 'querystring';
+import qs from 'node:querystring';
 import nanoexpress from '../src/nanoexpress.js';
 import Route from '../src/route.js';
 
@@ -76,11 +76,11 @@ class HeaderSupportedRoute extends Route {
   }
 }
 
-app.wraps(null, (method, [url], self) => {
+app.wraps(null, (_method, [url], self) => {
   if (url.indexOf(':') !== -1) {
     const matches = url.match(/:(.*)/g);
 
-    if (matches && matches.length) {
+    if (matches?.length) {
       const names = matches.map((match) => {
         const slashIndex = match.indexOf('/');
 

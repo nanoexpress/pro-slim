@@ -3,8 +3,8 @@ import { __request } from '../../../constants.js';
 // eslint-disable-next-line complexity
 export default function redirect(code, path) {
   const req = this[__request];
-  const host = req.headers && req.headers.host;
-  const protocol = (req.connection && req.connection.protocol) || 'http';
+  const host = req.headers?.host;
+  const protocol = req.connection?.protocol || 'http';
 
   if (!path && typeof code === 'string') {
     path = code;
