@@ -24,5 +24,13 @@
         "organizeImports": "off"
       }
     }
+  },
+  "linter": {
+    "rules": {
+      "correctness": {
+        "noUnusedVariables": "warn",
+        "noUnusedFunctionParameters": "warn"
+      }
+    }
   }
 }
