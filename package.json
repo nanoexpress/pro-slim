@@ -7,7 +7,7 @@
   "main": "src/nanoexpress.js",
   "typings": "nanoexpress.d.ts",
   "scripts": {
-    "lint": "ls-lint && biome check . && rumdl check .",
+    "lint": "ls-lint && biome check . && oxlint . && rumdl check .",
     "format": "biome check --write . && rumdl fmt .",
     "test": "node --test tests",
     "cleanup-cjs": "rm -rf cjs/*.js",
@@ -48,6 +48,7 @@
     "@ls-lint/ls-lint": "^2.3.1",
     "@types/node": "^26.6.3",
     "lefthook": "^2.1.15",
+    "oxlint": "^1.86.0",
     "rumdl": "^0.2.78",
     "typescript": "^7.0.2"
   }
