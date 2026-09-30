@@ -15,6 +15,7 @@
         "@types/node": "^26.6.3",
         "lefthook": "^2.1.15",
         "oxlint": "^1.86.0",
+        "release-me-sh": "^0.11.12",
         "rumdl": "^0.2.78",
         "typescript": "^7.0.2",
       },
@@ -274,6 +275,8 @@
     "parse-json": ["parse-json@5.2.0", "", { "dependencies": { "@babel/code-frame": "^7.0.0", "error-ex": "^1.3.1", "json-parse-even-better-errors": "^2.3.0", "lines-and-columns": "^1.1.6" } }, "sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg=="],
 
     "picocolors": ["picocolors@1.1.1", "", {}, "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA=="],
+
+    "release-me-sh": ["release-me-sh@0.11.12", "", { "bin": { "release-me": "release.sh", "release-me-sh": "release.sh" } }, "sha512-rLfJKZs/qei3GAb3aAZMH77gMfDJxqR9HxqjxCqBkx3F2eC+7CHPYvErJGlIka8Z4unyEkAJ3BKkqd2OHYL2lA=="],
 
     "require-from-string": ["require-from-string@2.0.2", "", {}, "sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw=="],
 
