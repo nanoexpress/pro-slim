@@ -41,7 +41,6 @@ jobs:
 
     strategy:
       matrix:
-        
         os: [ubuntu-latest, macos-latest]
 
     steps:
@@ -51,6 +50,11 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.4.2
+
+      - name: Use Node.js 26 (node:test runtime + uWS binaries)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 26
 
       - name: Cache
         uses: actions/cache@v3
