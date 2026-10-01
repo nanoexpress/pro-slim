@@ -73,6 +73,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7.0.1
+        with:
+          # release-me needs full history and tags to find the last release
+          fetch-depth: 0
+          fetch-tags: true
 
       - name: Use Bun.sh
         uses: oven-sh/setup-bun@v2.2.0
