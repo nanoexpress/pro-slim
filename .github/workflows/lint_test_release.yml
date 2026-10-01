@@ -71,6 +71,11 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
 
+    permissions:
+      # npm provenance attestation needs id-token; release-me tags + publishes releases
+      id-token: write
+      contents: write
+
     steps:
       - uses: actions/checkout@v7.0.1
         with:
