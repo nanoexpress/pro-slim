@@ -1,0 +1,6 @@
+# typos spell-check config
+# https://github.com/crate-ci/typos
+
+[files]
+# base64 certificate bodies trip the checker
+extend-exclude = ["examples/ssl"]
