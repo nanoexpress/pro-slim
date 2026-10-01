@@ -52,5 +52,8 @@
     "release-me-sh": "^0.11.12",
     "rumdl": "^0.2.78",
     "typescript": "^7.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
