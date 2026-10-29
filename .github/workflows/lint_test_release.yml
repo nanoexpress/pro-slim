@@ -22,12 +22,12 @@ jobs:
       - name: Use Bun.sh
         uses: oven-sh/setup-bun@v2.2.0
         with:
-          bun-version: 1.4.2
+          bun-version: 1.4.4
 
       - name: Cache
         uses: actions/cache@v6.1.0
         with:
-          path: '~/.bun/install/cache'
+          path: "~/.bun/install/cache"
           key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lock') }}
 
       - name: Install
@@ -59,7 +59,7 @@ jobs:
       - name: Cache
         uses: actions/cache@v6.1.0
         with:
-          path: '~/.bun/install/cache'
+          path: "~/.bun/install/cache"
           key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lock') }}
 
       - name: Install
@@ -96,7 +96,7 @@ jobs:
       - name: Cache
         uses: actions/cache@v6.1.0
         with:
-          path: '~/.bun/install/cache'
+          path: "~/.bun/install/cache"
           key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lock') }}
 
       - name: Install
