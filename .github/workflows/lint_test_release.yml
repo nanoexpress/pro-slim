@@ -69,6 +69,7 @@ jobs:
         run: bun run test
   release:
     needs: test
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
 
     permissions:
